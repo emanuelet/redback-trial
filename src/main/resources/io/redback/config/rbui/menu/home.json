@@ -1,0 +1,8 @@
+{
+	"view":"maindash",
+	"name":"home",
+	"icon":"home",
+	"label":"Home",
+	"type":"menulink",
+	"order":0
+}

@@ -1,0 +1,16 @@
+{		
+	"status":{
+		"1":{
+			"label":"Draft",
+			"code":"draft"
+		},
+		"2":{
+			"label":"Started",
+			"code":"started"
+		},
+		"3":{
+			"label":"Completed",
+			"code":"comp"
+		}		
+	}
+}
