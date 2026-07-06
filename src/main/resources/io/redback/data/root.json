@@ -11,6 +11,22 @@
     "3": {
       "label": "Completed",
       "code": "comp"
+    },
+    "4": {
+      "label": "Submitted",
+      "code": "submitted"
+    },
+    "5": {
+      "label": "In Progress",
+      "code": "inprogress"
+    },
+    "6": {
+      "label": "Clarification",
+      "code": "clarification"
+    },
+    "7": {
+      "label": "Archived",
+      "code": "archived"
     }
   },
   "ticketClassification": {
