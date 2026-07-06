@@ -6,7 +6,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<io.firebus.version>2.0.0</io.firebus.version>
-		<io.redback.version>2.0.0</io.redback.version>		
+		<io.redback.version>2.1.0</io.redback.version>		
 	</properties>
 	<dependencies>
 		<dependency>
