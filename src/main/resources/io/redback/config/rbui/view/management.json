@@ -1,0 +1,238 @@
+{
+  "name": "management",
+  "label": "Management",
+  "accesscat": "tickets",
+  "content": [
+    {
+      "type": "tabsection",
+      "content": [
+        {
+          "type": "tab",
+          "label": "Statuses",
+          "isdefault": true,
+          "content": [
+            {
+              "type": "dataset",
+              "object": "status",
+              "name": "statusDS",
+              "content": [
+                {
+                  "type": "hsection",
+                  "content": [
+                    {
+                      "type": "vsection",
+                      "shrink": 0,
+                      "grow": 0,
+                      "content": [
+                        {
+                          "type": "hsection",
+                          "content": [
+                            {
+                              "action": "create",
+                              "label": "New Status",
+                              "type": "button"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "list4",
+                          "mainattribute": "label",
+                          "subattribute": "code"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "hseparator"
+                    },
+                    {
+                      "type": "vsection",
+                      "content": [
+                        {
+                          "type": "hsection",
+                          "content": [
+                            {
+                              "type": "input",
+                              "attribute": "code",
+                              "label": "Code",
+                              "size": 15
+                            },
+                            {
+                              "type": "input",
+                              "attribute": "label",
+                              "label": "Label",
+                              "size": 30
+                            },
+                            {
+                              "type": "actiongroup",
+                              "actions": [
+                                {
+                                  "action": "delete",
+                                  "label": "Delete",
+                                  "show": "object != null"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "label": "Classifications",
+          "content": [
+            {
+              "type": "dataset",
+              "object": "ticketClassification",
+              "name": "classDS",
+              "content": [
+                {
+                  "type": "hsection",
+                  "content": [
+                    {
+                      "type": "vsection",
+                      "shrink": 0,
+                      "grow": 0,
+                      "content": [
+                        {
+                          "type": "hsection",
+                          "content": [
+                            {
+                              "action": "create",
+                              "label": "New Classification",
+                              "type": "button"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "list4",
+                          "mainattribute": "label",
+                          "subattribute": "code"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "hseparator"
+                    },
+                    {
+                      "type": "vsection",
+                      "content": [
+                        {
+                          "type": "hsection",
+                          "content": [
+                            {
+                              "type": "input",
+                              "attribute": "code",
+                              "label": "Code",
+                              "size": 15
+                            },
+                            {
+                              "type": "input",
+                              "attribute": "label",
+                              "label": "Label",
+                              "size": 30
+                            },
+                            {
+                              "type": "actiongroup",
+                              "actions": [
+                                {
+                                  "action": "delete",
+                                  "label": "Delete",
+                                  "show": "object != null"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "label": "Users",
+          "content": [
+            {
+              "type": "dataset",
+              "object": "user",
+              "name": "userDS",
+              "content": [
+                {
+                  "type": "hsection",
+                  "content": [
+                    {
+                      "type": "vsection",
+                      "shrink": 0,
+                      "grow": 0,
+                      "content": [
+                        {
+                          "type": "hsection",
+                          "content": [
+                            {
+                              "action": "create",
+                              "label": "New User",
+                              "type": "button"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "list4",
+                          "mainattribute": "label",
+                          "subattribute": "code"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "hseparator"
+                    },
+                    {
+                      "type": "vsection",
+                      "content": [
+                        {
+                          "type": "hsection",
+                          "content": [
+                            {
+                              "type": "input",
+                              "attribute": "code",
+                              "label": "Code",
+                              "size": 15
+                            },
+                            {
+                              "type": "input",
+                              "attribute": "label",
+                              "label": "Label",
+                              "size": 30
+                            },
+                            {
+                              "type": "actiongroup",
+                              "actions": [
+                                {
+                                  "action": "delete",
+                                  "label": "Delete",
+                                  "show": "object != null"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

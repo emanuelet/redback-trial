@@ -1,0 +1,8 @@
+{
+  "view": "management",
+  "name": "management",
+  "icon": "settings",
+  "label": "Management",
+  "type": "menulink",
+  "order": 2
+}
