@@ -1,5 +1,8 @@
 temp/
 target/
+redback.json
+redback.properties
+*.log
 .settings
 .project
 .classpath
