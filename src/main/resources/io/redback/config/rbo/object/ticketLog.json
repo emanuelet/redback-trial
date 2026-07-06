@@ -1,0 +1,42 @@
+{
+  "candelete": "true",
+  "cancreate": "true",
+  "name": "ticketLog",
+  "domaindbkey": "domain",
+  "attributes": [
+    {
+      "default": "session.userProfile.username",
+      "editable": "false",
+      "name": "createdBy",
+      "dbkey": "createdBy"
+    },
+    {
+      "default": "new Date()",
+      "editable": "createdDate == null",
+      "name": "createdDate",
+      "dbkey": "createdDate"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "entry",
+      "dbkey": "entry"
+    },
+    {
+      "editable": "false",
+      "name": "ticketUid",
+      "dbkey": "ticketUid"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "category",
+      "dbkey": "category"
+    }
+  ],
+  "uiddbkey": "_id",
+  "collection": "ticketLogs",
+  "uidgenerator": "guid",
+  "scripts": {},
+  "accesscat": "tickets"
+}

@@ -1,8 +1,8 @@
 {
-	"view":"tickets",
-	"name":"tockets",
-	"icon":"draft",
-	"label":"Tickets",
-	"type":"menulink",
-	"order":1
+  "view": "tickets",
+  "name": "tockets",
+  "icon": "draft",
+  "label": "Tickets",
+  "type": "menulink",
+  "order": 1
 }

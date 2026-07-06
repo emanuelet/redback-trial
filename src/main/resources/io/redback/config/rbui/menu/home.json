@@ -1,8 +1,8 @@
 {
-	"view":"maindash",
-	"name":"home",
-	"icon":"home",
-	"label":"Home",
-	"type":"menulink",
-	"order":0
+  "view": "maindash",
+  "name": "home",
+  "icon": "home",
+  "label": "Home",
+  "type": "menulink",
+  "order": 0
 }
