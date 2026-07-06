@@ -93,6 +93,38 @@
                       "attribute": "details",
                       "size": 50,
                       "rows": 20
+                    },
+                    {
+                      "type": "hsection",
+                      "grow": 1,
+                      "content": [
+                        {
+                          "type": "dataset",
+                          "object": "ticketLog",
+                          "name": "ticketLogs",
+                          "master": {
+                            "relationship": {
+                              "ticketUid": "uid"
+                            }
+                          },
+                          "basesort": {
+                            "0": {
+                              "attribute": "createdDate",
+                              "dir": -1
+                            }
+                          },
+                          "content": [
+                            {
+                              "type": "log",
+                              "userattribute": "createdBy",
+                              "dateattribute": "createdDate",
+                              "entryattribute": "entry",
+                              "categoryattribute": "category",
+                              "size": 20
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
