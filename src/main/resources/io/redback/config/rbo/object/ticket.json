@@ -1,69 +1,77 @@
 {
-	"candelete":"true",
-	"name":"ticket",
-	"domaindbkey":"domain",
-	"attributes":[
-		{
-			"idgenerator":"ticketcode",
-			"search":true,
-			"editable":"true",
-			"name":"code",
-			"dbkey":"code"
-		},
-		{
-			"search":true,
-			"editable":"true",
-			"name":"label",
-			"dbkey":"label"
-		},
-		{
-			"default":"session.userProfile.username",
-			"search":true,
-			"editable":"true",
-			"name":"requestor",
-			"dbkey":"requestor"
-		},
-		{
-			"search":true,
-			"editable":"true",
-			"name":"assignee",
-			"dbkey":"assignee"
-		},
-		{
-			"search":true,
-			"editable":"true",
-			"name":"ticketClassification",
-			"dbkey":"ticketClassification"
-		},
-		{
-			"search":true,
-			"editable":"true",
-			"name":"details",
-			"dbkey":"details"
-		},
-		{
-			"default":"new Date()",
-			"editable":"requestdate == null",
-			"name":"requestdate",
-			"dbkey":"requestdate"
-		},
-		{
-			"default":"'draft'",
-			"editable":"true",
-			"name":"status",
-			"relatedobject":{
-				"linkattribute":"code",
-				"listfilter":{
-				},
-				"name":"status"
-			},
-			"dbkey":"status"
-		}
-	],
-	"uiddbkey":"_id",
-	"collection":"tickets",
-	"uidgenerator":"guid",
-	"scripts":{
-	},
-	"accesscat":"tickets"
+  "candelete": "true",
+  "name": "ticket",
+  "domaindbkey": "domain",
+  "attributes": [
+    {
+      "idgenerator": "ticketcode",
+      "search": true,
+      "editable": "true",
+      "name": "code",
+      "dbkey": "code"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "label",
+      "dbkey": "label"
+    },
+    {
+      "default": "session.userProfile.username",
+      "search": true,
+      "editable": "true",
+      "name": "requestor",
+      "dbkey": "requestor"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "assignee",
+      "relatedobject": {
+        "linkattribute": "code",
+        "listfilter": {},
+        "name": "user"
+      },
+      "dbkey": "assignee"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "ticketClassification",
+      "relatedobject": {
+        "linkattribute": "code",
+        "listfilter": {},
+        "name": "ticketClassification"
+      },
+      "dbkey": "ticketClassification"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "details",
+      "dbkey": "details"
+    },
+    {
+      "default": "new Date()",
+      "editable": "requestdate == null",
+      "name": "requestdate",
+      "dbkey": "requestdate"
+    },
+    {
+      "default": "'draft'",
+      "editable": "true",
+      "name": "status",
+      "relatedobject": {
+        "linkattribute": "code",
+        "listfilter": {},
+        "name": "status"
+      },
+      "dbkey": "status"
+    }
+  ],
+  "uiddbkey": "_id",
+  "collection": "tickets",
+  "uidgenerator": "guid",
+  "scripts": {},
+  "accesscat": "tickets"
 }

@@ -1,0 +1,24 @@
+{
+  "candelete": "true",
+  "name": "ticketClassification",
+  "domaindbkey": "domain",
+  "attributes": [
+    {
+      "search": false,
+      "editable": "true",
+      "name": "code",
+      "dbkey": "code"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "label",
+      "dbkey": "label"
+    }
+  ],
+  "uiddbkey": "_id",
+  "collection": "ticketClassifications",
+  "uidgenerator": "guid",
+  "scripts": {},
+  "accesscat": "tickets"
+}

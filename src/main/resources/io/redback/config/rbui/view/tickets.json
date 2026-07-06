@@ -109,15 +109,17 @@
                       "size": 15
                     },
                     {
-                      "type": "input",
+                      "type": "relatedinput",
                       "attribute": "assignee",
+                      "displayattribute": "label",
                       "label": "Assignee",
                       "icon": "person",
                       "size": 15
                     },
                     {
-                      "type": "input",
+                      "type": "relatedinput",
                       "attribute": "ticketClassification",
+                      "displayattribute": "label",
                       "label": "Ticket Classification",
                       "icon": "category",
                       "size": 15

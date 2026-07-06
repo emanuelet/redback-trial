@@ -1,16 +1,44 @@
-{		
-	"status":{
-		"1":{
-			"label":"Draft",
-			"code":"draft"
-		},
-		"2":{
-			"label":"Started",
-			"code":"started"
-		},
-		"3":{
-			"label":"Completed",
-			"code":"comp"
-		}		
-	}
+{
+  "status": {
+    "1": {
+      "label": "Draft",
+      "code": "draft"
+    },
+    "2": {
+      "label": "Started",
+      "code": "started"
+    },
+    "3": {
+      "label": "Completed",
+      "code": "comp"
+    }
+  },
+  "ticketClassification": {
+    "1": {
+      "label": "Bug",
+      "code": "bug"
+    },
+    "2": {
+      "label": "Feature",
+      "code": "feature"
+    },
+    "3": {
+      "label": "Improvement",
+      "code": "improvement"
+    }
+  },
+  "user": {
+    "1": {
+      "label": "John Doe",
+      "code": "john.doe"
+    },
+    "2": {
+      "label": "Jane Doe",
+      "code": "jane.doe"
+    },
+    "3": {
+      "label": "Bob Smith",
+      "code": "bob.smith"
+    }
+  }
 }
