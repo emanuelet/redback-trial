@@ -26,6 +26,18 @@
 		{
 			"search":true,
 			"editable":"true",
+			"name":"assignee",
+			"dbkey":"assignee"
+		},
+		{
+			"search":true,
+			"editable":"true",
+			"name":"ticketClassification",
+			"dbkey":"ticketClassification"
+		},
+		{
+			"search":true,
+			"editable":"true",
 			"name":"details",
 			"dbkey":"details"
 		},
