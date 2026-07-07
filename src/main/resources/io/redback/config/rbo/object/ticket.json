@@ -72,6 +72,8 @@
   "uiddbkey": "_id",
   "collection": "tickets",
   "uidgenerator": "guid",
-  "scripts": {},
+  "scripts": {
+    "oncreate": "om.createObject('ticketLog', null, {ticketUid: uid, entry: 'Ticket created', category: 'system'});"
+  },
   "accesscat": "tickets"
 }
