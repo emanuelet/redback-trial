@@ -1,0 +1,35 @@
+{
+  "candelete": "true",
+  "name": "userSwitch",
+  "domaindbkey": "domain",
+  "attributes": [
+    {
+      "search": false,
+      "editable": "true",
+      "name": "code",
+      "dbkey": "code"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "label",
+      "dbkey": "label"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "activeUser",
+      "relatedobject": {
+        "linkattribute": "code",
+        "listfilter": {},
+        "name": "user"
+      },
+      "dbkey": "activeUser"
+    }
+  ],
+  "uiddbkey": "_id",
+  "collection": "userSwitches",
+  "uidgenerator": "guid",
+  "scripts": {},
+  "accesscat": "tickets"
+}

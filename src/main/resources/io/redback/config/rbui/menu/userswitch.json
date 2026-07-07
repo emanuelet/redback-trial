@@ -1,0 +1,8 @@
+{
+  "view": "userswitch",
+  "name": "userswitch",
+  "icon": "switch_account",
+  "label": "User Switch",
+  "type": "menulink",
+  "order": 2
+}

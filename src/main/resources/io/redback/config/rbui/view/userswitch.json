@@ -1,0 +1,92 @@
+{
+  "name": "userswitch",
+  "label": "User Switch",
+  "accesscat": "tickets",
+  "content": [
+    {
+      "type": "dataset",
+      "object": "userSwitch",
+      "name": "userSwitchDS",
+      "content": [
+        {
+          "type": "hsection",
+          "content": [
+            {
+              "type": "vsection",
+              "shrink": 0,
+              "grow": 0,
+              "content": [
+                {
+                  "type": "hsection",
+                  "content": [
+                    {
+                      "action": "create",
+                      "label": "New Switch",
+                      "param": {
+                        "code": "current",
+                        "label": "Current User"
+                      },
+                      "type": "button"
+                    }
+                  ]
+                },
+                {
+                  "type": "list4",
+                  "mainattribute": "label",
+                  "subattribute": "activeUser"
+                }
+              ]
+            },
+            {
+              "type": "hseparator"
+            },
+            {
+              "type": "vsection",
+              "content": [
+                {
+                  "type": "hsection",
+                  "content": [
+                    {
+                      "type": "input",
+                      "attribute": "code",
+                      "label": "Code",
+                      "size": 15
+                    },
+                    {
+                      "type": "input",
+                      "attribute": "label",
+                      "label": "Label",
+                      "size": 25
+                    },
+                    {
+                      "type": "relatedinput",
+                      "attribute": "activeUser",
+                      "displayattribute": "label",
+                      "label": "Acting User",
+                      "icon": "person",
+                      "size": 25
+                    },
+                    {
+                      "type": "actiongroup",
+                      "actions": [
+                        {
+                          "action": "delete",
+                          "label": "Delete",
+                          "show": "object != null"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "Workflow actions use the selected Acting User. If no switch exists or no Acting User is selected, the real logged-in user is used."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

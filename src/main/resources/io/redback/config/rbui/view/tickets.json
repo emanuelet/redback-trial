@@ -76,9 +76,40 @@
                       "type": "actiongroup",
                       "actions": [
                         {
+                          "action": "execute",
+                          "target": "submit",
+                          "label": "Submit",
+                          "show": "object != null && object.get('status') == 'draft'"
+                        },
+                        {
+                          "action": "execute",
+                          "target": "resubmit",
+                          "label": "Resubmit",
+                          "show": "object != null && object.get('status') == 'clarification'"
+                        },
+                        {
+                          "action": "execute",
+                          "target": "start",
+                          "label": "Start Work",
+                          "show": "object != null && object.get('status') == 'submitted'"
+                        },
+                        {
+                          "action": "execute",
+                          "target": "clarify",
+                          "label": "Return for Clarification",
+                          "show": "object != null && (object.get('status') == 'submitted' || object.get('status') == 'inprogress')"
+                        },
+                        {
+                          "action": "execute",
+                          "target": "archive",
+                          "label": "Archive",
+                          "confirm": "Archive this ticket?",
+                          "show": "object != null && object.get('status') == 'inprogress'"
+                        },
+                        {
                           "action": "delete",
                           "label": "Delete",
-                          "show": "object != null"
+                          "show": "object != null && object.get('status') != 'archived'"
                         }
                       ]
                     }

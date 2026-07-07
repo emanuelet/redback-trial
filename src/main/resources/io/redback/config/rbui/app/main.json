@@ -17,7 +17,7 @@
       "object": "task"
     }
   },
-  "menu": ["home", "tickets", "management"],
+  "menu": ["home", "tickets", "userswitch", "management"],
   "label": "Redback Trial",
   "onload": null,
   "layout": "desktop",

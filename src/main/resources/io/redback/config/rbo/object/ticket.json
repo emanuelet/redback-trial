@@ -19,13 +19,13 @@
     {
       "default": "session.userProfile.username",
       "search": true,
-      "editable": "true",
+      "editable": "requestor == null || session.isInScript()",
       "name": "requestor",
       "dbkey": "requestor"
     },
     {
       "search": true,
-      "editable": "true",
+      "editable": "status == 'draft' || status == 'clarification' || session.isInScript()",
       "name": "assignee",
       "relatedobject": {
         "linkattribute": "code",
@@ -36,7 +36,7 @@
     },
     {
       "search": true,
-      "editable": "true",
+      "editable": "status == 'draft' || status == 'clarification' || session.isInScript()",
       "name": "ticketClassification",
       "relatedobject": {
         "linkattribute": "code",
@@ -47,7 +47,7 @@
     },
     {
       "search": true,
-      "editable": "true",
+      "editable": "status == 'draft' || status == 'clarification' || status == 'inprogress' || session.isInScript()",
       "name": "details",
       "dbkey": "details"
     },
@@ -59,7 +59,7 @@
     },
     {
       "default": "'draft'",
-      "editable": "true",
+      "editable": "session.isInScript()",
       "name": "status",
       "relatedobject": {
         "linkattribute": "code",
@@ -73,7 +73,12 @@
   "collection": "tickets",
   "uidgenerator": "guid",
   "scripts": {
-    "oncreate": "om.createObject('ticketLog', null, {ticketUid: uid, entry: 'Ticket created', category: 'system'});"
+    "oncreate": "var actor = userprofile.username;\nvar switches = om.getObjectList('userSwitch', {code:'current'});\nif(switches.length > 0 && switches[0].activeUser != null && switches[0].activeUser != '') actor = switches[0].activeUser;\nself.requestor = actor;\nom.createObject('ticketLog', null, {ticketUid: uid, entry: 'Ticket created by ' + actor, category: 'system', createdBy: actor});",
+    "submit": "var actor = userprofile.username;\nvar switches = om.getObjectList('userSwitch', {code:'current'});\nif(switches.length > 0 && switches[0].activeUser != null && switches[0].activeUser != '') actor = switches[0].activeUser;\nif(self.status != 'draft' && self.status != 'clarification') throw('Only draft or clarification tickets can be submitted');\nif(self.requestor != actor) throw('Only the requester can submit this ticket');\nif(self.assignee == null || self.assignee == '') throw('Choose an assignee before submitting');\nself.status = 'submitted';\nom.createObject('ticketLog', null, {ticketUid: uid, entry: 'Submitted to ' + self.assignee + ' by ' + actor, category: 'workflow', createdBy: actor});",
+    "start": "var actor = userprofile.username;\nvar switches = om.getObjectList('userSwitch', {code:'current'});\nif(switches.length > 0 && switches[0].activeUser != null && switches[0].activeUser != '') actor = switches[0].activeUser;\nif(self.status != 'submitted') throw('Only submitted tickets can be started');\nif(self.assignee != actor) throw('Only the assignee can start work on this ticket');\nself.status = 'inprogress';\nom.createObject('ticketLog', null, {ticketUid: uid, entry: 'Work started by ' + actor, category: 'workflow', createdBy: actor});",
+    "clarify": "var actor = userprofile.username;\nvar switches = om.getObjectList('userSwitch', {code:'current'});\nif(switches.length > 0 && switches[0].activeUser != null && switches[0].activeUser != '') actor = switches[0].activeUser;\nif(self.status != 'submitted' && self.status != 'inprogress') throw('Only submitted or in-progress tickets can be returned for clarification');\nif(self.assignee != actor) throw('Only the assignee can request clarification');\nself.status = 'clarification';\nom.createObject('ticketLog', null, {ticketUid: uid, entry: 'Returned to requester for clarification by ' + actor, category: 'workflow', createdBy: actor});",
+    "resubmit": "var actor = userprofile.username;\nvar switches = om.getObjectList('userSwitch', {code:'current'});\nif(switches.length > 0 && switches[0].activeUser != null && switches[0].activeUser != '') actor = switches[0].activeUser;\nif(self.status != 'clarification') throw('Only tickets awaiting clarification can be resubmitted');\nif(self.requestor != actor) throw('Only the requester can resubmit this ticket');\nif(self.assignee == null || self.assignee == '') throw('Choose an assignee before resubmitting');\nself.status = 'submitted';\nom.createObject('ticketLog', null, {ticketUid: uid, entry: 'Clarification supplied and ticket resubmitted by ' + actor, category: 'workflow', createdBy: actor});",
+    "archive": "var actor = userprofile.username;\nvar switches = om.getObjectList('userSwitch', {code:'current'});\nif(switches.length > 0 && switches[0].activeUser != null && switches[0].activeUser != '') actor = switches[0].activeUser;\nif(self.status != 'inprogress') throw('Only in-progress tickets can be archived');\nif(self.assignee != actor) throw('Only the assignee can archive this ticket');\nself.status = 'archived';\nom.createObject('ticketLog', null, {ticketUid: uid, entry: 'Ticket archived by ' + actor, category: 'workflow', createdBy: actor});"
   },
   "accesscat": "tickets"
 }
