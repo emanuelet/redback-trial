@@ -3,8 +3,18 @@
   "name": "user",
   "domaindbkey": "domain",
   "attributes": [
-    { "search": false, "editable": "true", "name": "code", "dbkey": "code" },
-    { "search": true, "editable": "true", "name": "label", "dbkey": "label" }
+    {
+      "search": false,
+      "editable": "true",
+      "name": "code",
+      "dbkey": "code"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "label",
+      "dbkey": "label"
+    }
   ],
   "uiddbkey": "_id",
   "collection": "users",

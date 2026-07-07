@@ -45,16 +45,12 @@
   },
   "user": {
     "1": {
-      "label": "John Doe",
-      "code": "john.doe"
+      "label": "Trial User",
+      "code": "trial@redback.io"
     },
     "2": {
-      "label": "Jane Doe",
-      "code": "jane.doe"
-    },
-    "3": {
-      "label": "Bob Smith",
-      "code": "bob.smith"
+      "label": "Support User",
+      "code": "support@redback.io"
     }
   }
 }
