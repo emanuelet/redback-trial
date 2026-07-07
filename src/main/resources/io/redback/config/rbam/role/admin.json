@@ -1,23 +1,17 @@
 {
-	"rights":{
-		"rb":{
-			"objects":{
-
-			},
-			"scripts":{
-
-			},
-			"views":{
-				
-			},
-			"apps":{
-				"main":"rwx"
-			},
-			"accesscat":{
-				"home":"rwx",
-				"tickets":"rwx"
-			}
-		}
-	},
-	"name":"admin"
+  "rights": {
+    "rb": {
+      "objects": {},
+      "scripts": {},
+      "views": {},
+      "apps": {
+        "main": "rwx"
+      },
+      "accesscat": {
+        "home": "rwx",
+        "tickets": "rwx"
+      }
+    }
+  },
+  "name": "admin"
 }

@@ -1,27 +1,27 @@
 {
-	"name":"maindash",
-	"label":"Home",
-	"accesscat":"home",
-	"content":[
-		{
-			"type":"vsection",
-			"content":[
-				{
-					"type":"hsection",
-					"content":[
-						{
-							"type":"spacer"
-						},
-						{
-							"type":"text",
-							"value":"There is nothing on this dashboard yet."
-						},
-						{
-							"type":"spacer"
-						}						
-					]
-				}
-			]
-		}
-	]
+  "name": "maindash",
+  "label": "Home",
+  "accesscat": "home",
+  "content": [
+    {
+      "type": "vsection",
+      "content": [
+        {
+          "type": "hsection",
+          "content": [
+            {
+              "type": "spacer"
+            },
+            {
+              "type": "text",
+              "value": "There is nothing on this dashboard yet."
+            },
+            {
+              "type": "spacer"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

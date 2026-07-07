@@ -1,4 +1,4 @@
 {
-	"name":"guid",
-	"type":"uuid"
+  "name": "guid",
+  "type": "uuid"
 }

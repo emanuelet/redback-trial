@@ -1,25 +1,24 @@
 {
-	"candelete":"true",
-	"name":"status",
-	"domaindbkey":"domain",
-	"attributes":[
-		{
-			"search":false,
-			"editable":"true",
-			"name":"code",
-			"dbkey":"code"
-		},
-		{
-			"search":true,
-			"editable":"true",
-			"name":"label",
-			"dbkey":"label"
-		}
-	],
-	"uiddbkey":"_id",
-	"collection":"statuses",
-	"uidgenerator":"guid",
-	"scripts":{
-	},
-	"accesscat":"tickets"
+  "candelete": "true",
+  "name": "status",
+  "domaindbkey": "domain",
+  "attributes": [
+    {
+      "search": false,
+      "editable": "true",
+      "name": "code",
+      "dbkey": "code"
+    },
+    {
+      "search": true,
+      "editable": "true",
+      "name": "label",
+      "dbkey": "label"
+    }
+  ],
+  "uiddbkey": "_id",
+  "collection": "statuses",
+  "uidgenerator": "guid",
+  "scripts": {},
+  "accesscat": "tickets"
 }

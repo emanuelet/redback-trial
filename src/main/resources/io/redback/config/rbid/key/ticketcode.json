@@ -1,5 +1,5 @@
 {
-	"pad":7,
-	"name":"ticketcode",
-	"type":"sequence"
+  "pad": 7,
+  "name": "ticketcode",
+  "type": "sequence"
 }
